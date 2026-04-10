@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer3 js</title>
+</head>
+<body>
+    <button id="btnContador">boton para contar clicks</button>
+    <p>Número de clics: <span id="resultado">0</span></p>
+
+    <script>
+       
+        let contador = 0;
+ const boton = document.getElementById("btnContador");
+        const pantalla = document.getElementById("resultado");
+
+        boton.addEventListener("click", function() {
+            
+            contador = contador + 1;
+          pantalla.innerHTML = contador;
+        });
+    </script>
+</body>
+</html>

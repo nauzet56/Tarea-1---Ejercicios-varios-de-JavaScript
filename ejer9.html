@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer9 js</title>
+</head>
+<body>
+    <input type="text" id="tarea" placeholder="Nueva tarea...">
+    <button id="btnAñadir">Añadir</button>
+    
+    <ul id="lista">
+        </ul>
+
+    <script>
+        const inputTarea = document.getElementById("tarea");
+        const boton = document.getElementById("btnAñadir");
+        const lista = document.getElementById("lista");
+
+        boton.addEventListener("click", function() {
+            
+            const texto = inputTarea.value;
+
+            if (texto.trim() !== "") {
+           
+                lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>";
+                 inputTarea.value = "";
+                inputTarea.focus();
+            }
+        });
+    </script>
+
+</body>
+</html>

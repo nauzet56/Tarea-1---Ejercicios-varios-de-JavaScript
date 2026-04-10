@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer5 js</title>
+</head>
+<body>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <button id="saludo">Saludar</button>
+    <p id="resultado"></p>
+
+    <script>
+const inputNombre = document.getElementById("nombre");
+const boton = document.getElementById("saludo");
+const resultado = document.getElementById("resultado");
+
+boton.addEventListener("click", function() {
+
+    const valor = inputNombre.value;
+
+    if (valor.trim() !== "") {
+        resultado.innerHTML = "¡hola, " + valor + "!";
+            } else {
+                resultado.innerHTML = "Introduce un nombre para saludarte";
+            }
+        });
+    </script>
+</body>
+</html>

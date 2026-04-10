@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer7 js</title>
+</head>
+<body>
+    <button id="btnAlternar">ocultar</button>
+    <p id="parrafo">Pulsa el boton de arriba, aparecere y desaparecere.</p>
+
+    <script>
+        let visible = true;
+        const boton = document.getElementById("btnAlternar");
+        const parrafo = document.getElementById("parrafo");
+
+        boton.addEventListener("click", function() {
+            if (visible) {
+             
+                
+                parrafo.style.display = "none";
+                boton.innerHTML = "Mostrar";
+                visible = false; 
+            } else {
+                
+                parrafo.style.display = "block";
+                boton.innerHTML = "Ocultar";
+                visible = true;
+            }
+        });
+    </script>
+    
+</body>
+</html>

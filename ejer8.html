@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer8 js</title>
+</head>
+<body>
+    <button id="btnCambiar">cambio de imagen</button>
+    <br><br>
+    
+    <img id="foto" src="https://picsum.photos/200/150?random=1" alt="Imagen aleatoria">
+
+    <script>
+        
+        const boton = document.getElementById("btnCambiar");
+        const imagen = document.getElementById("foto");
+        
+        boton.addEventListener("click", function() {
+           
+            const numeroAleatorio = Math.floor(Math.random() * 1000);
+            imagen.src = "https://picsum.photos/200/150?random=" + numeroAleatorio;
+        });
+    </script>
+</body>
+</html>
